@@ -17,9 +17,7 @@ from rago.generation.base import GenerationBase
 class FireworksGen(GenerationBase):
     """Fireworks AI generation model for text generation."""
 
-    default_model_name: str = (
-        'accounts/fireworks/models/llama-v3-8b-instruct'
-    )
+    default_model_name: str = 'accounts/fireworks/models/llama-v3-8b-instruct'
     default_api_params = {  # noqa: RUF012
         'top_p': 0.9,
     }
@@ -29,7 +27,7 @@ class FireworksGen(GenerationBase):
         model = Fireworks(api_key=self.api_key)
 
         self.model = (
-            instructor.from_fireworks(
+            instructor.from_fireworks(  # type: ignore[attr-defined]
                 client=model,
                 mode=instructor.Mode.FIREWORKS_JSON,
             )

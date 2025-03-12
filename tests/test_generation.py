@@ -61,7 +61,13 @@ gen_models = [
             model_name='command-r-plus-08-2024',
         ),
     ),
-
+    # model 5
+    partial(
+        DeepSeekGen,
+        **dict(
+            device='auto',
+        ),
+    ),
     # model 6
     partial(
         FireworksGen,
