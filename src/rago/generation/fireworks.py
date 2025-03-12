@@ -27,7 +27,7 @@ class FireworksGen(GenerationBase):
         model = Fireworks(api_key=self.api_key)
 
         self.model = (
-            instructor.from_fireworks(  # type: ignore[attr-defined]
+            instructor.from_fireworks(
                 client=model,
                 mode=instructor.Mode.FIREWORKS_JSON,
             )
