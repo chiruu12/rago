@@ -121,7 +121,7 @@ $ pre-commit run --all-files
 If you would like to skip the failing checks and push the code for further
 discussion, use the `--no-verify` option with `git commit`.
 
- ```bash
+```bash
 $ git commit -m "Your commit message" --no-verify
 ```
 
